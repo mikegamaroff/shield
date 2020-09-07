@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "learn-starter",
-=======
   "name": "nextjs",
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,11 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "next": "9.3.5",
-=======
     "next": "9.5.1",
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }

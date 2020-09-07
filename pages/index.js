@@ -1,26 +1,16 @@
-<<<<<<< HEAD
 import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="container">
-=======
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
-  return (
-    <div className={styles.container}>
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-<<<<<<< HEAD
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.jss!</a>
+          Welcome to <a href="https://nextjs.org">Next.jssss!</a>
         </h1>
 
         <p className="description">
@@ -29,41 +19,18 @@ export default function Home() {
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
-=======
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-<<<<<<< HEAD
           <a href="https://nextjs.org/learn" className="card">
-=======
-          <a href="https://nextjs.org/learn" className={styles.card}>
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
             <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
           <a
-<<<<<<< HEAD
             href="https://github.com/zeit/next.js/tree/master/examples"
             className="card"
-=======
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
           >
             <h3>Examples &rarr;</h3>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
@@ -71,11 +38,7 @@ export default function Home() {
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-<<<<<<< HEAD
             className="card"
-=======
-            className={styles.card}
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
           >
             <h3>Deploy &rarr;</h3>
             <p>
@@ -85,17 +48,12 @@ export default function Home() {
         </div>
       </main>
 
-<<<<<<< HEAD
       <footer>
-=======
-      <footer className={styles.footer}>
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-<<<<<<< HEAD
           Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
@@ -248,12 +206,4 @@ export default function Home() {
       `}</style>
     </div>
   );
-=======
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
->>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
 }
