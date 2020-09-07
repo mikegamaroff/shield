@@ -17,6 +17,10 @@
 
 # misc
 .DS_Store
+<<<<<<< HEAD
+=======
+*.pem
+>>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
 
 # debug
 npm-debug.log*
@@ -28,3 +32,9 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+<<<<<<< HEAD
+=======
+
+# vercel
+.vercel
+>>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
