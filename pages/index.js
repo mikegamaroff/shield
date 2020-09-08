@@ -35,6 +35,66 @@ class Home extends Component {
     sent: false,
   };
 
+  componentDidMount() {
+    this._mounted = true;
+
+    /* axios
+      .get("https://us-central1-mikegamaroff-8ec96.cloudfunctions.net/getNews")
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ news: res.data });
+      })
+      .catch((err) => {
+        console.log(err);
+      }); */
+    // this.slideChange();
+  }
+  handleChange = (e) => {
+    console.log(e.target.value);
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  getMail = async (state) => {
+    /*     fetch("http://localhost:3000/api/mail").then((r) => {
+      console.log(r.json());
+    }); */
+    const req = await fetch("/api/mail");
+    const result = await req;
+
+    if (result.ok) {
+      this.setState({ sent: "sent" });
+    } else {
+      this.setState({ sent: "failed" });
+    }
+
+    // const data = await res;
+    //console.log(data);
+    //  return data;
+  };
+  handleSubmit = (e) => {
+    this.setState({ sending: "Sending...", errors: {} });
+    e.preventDefault();
+
+    this.getMail(this.state);
+
+    /* axios
+      .post(
+        "https://us-central1-mikegamaroff-8ec96.cloudfunctions.net/sendEmail",
+        this.state
+      )
+      .then((res) => {
+        console.log(res);
+        this.setState({ sending: false, sent: true });
+      })
+      .catch((err) => {
+        console.log(err);
+        //  this.setState({ sending: false, errors: err.response.data });
+        //  console.log(err.response.data);
+      }); */
+  };
+
   render() {
     const { errors } = this.state;
     const { classes } = this.props;

@@ -1,31 +1,58 @@
-export default (req, res) => {
-  if (req.method === "POST") {
-    const { name, from, message } = req.body;
-
-    var api_key = "07df993f149baa7963e6df5f44a9a7d3-468bde97-aa63cfb1";
-    //var domain = "mg.caqophony.com";
-    // var domain = "sandboxe8d4ea9d73034098a547f4c7007d7f0a.mailgun.org";
-    var domain = "mg.caqophony.com";
-    var mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
-
-    var data = {
-      from: `${name} <${from}>`,
-      to: "mike@gamaroff.com",
-      subject: "Caqophony Mail form",
-      text: `${name} just sent you an email.  ${message}`,
-      html: `${name} just sent you an email.<br><br>${message}`,
-    };
-
-    mailgun.messages().send(data, function (error, body) {
-      if (error) {
-        return res.json(error);
-      } else {
-        return res.json(body);
-      }
-    });
-  } else {
-  }
+import axios from "axios";
+const api = "https://api.gohighlevel.com/zapier/";
+const token = "c0712103-41f2-43d1-ac0e-c0dcf46600ea";
+var data = {
+  first_name: "Mike",
+  last_name: "Gamaroff",
+  name: "Mike",
+  email: "mike@gamaroff.net",
+  phone: "917.678.2017",
+  address1: "123 My St.",
+  city: "Meridian",
+  country: "US",
+  state: "Idaho",
+  postalCode: "83646",
+  lead: 1,
+  source: "web site",
+  tags: "comma, seperated, list",
+  notes: "Note to add to contact",
+  timezone: "America/Boise *Not available via Zapier",
+  monetary_value: "500 *Not available via Zapier",
+  assignedTo: "Matt",
 };
+const config = {
+  headers: { Authorization: `Bearer ${token}` },
+};
+
+export default (req, res) => {
+  return axios
+    .post(
+      "https://api.gohighlevel.com/zapier/add_update_opportunity",
+      data,
+      config
+    )
+    .then((res) => {
+      console.log(res.data);
+      return res.data;
+      // This is where you push all the selecter unit data to the redux state so it can be immediately updated
+    })
+    .catch((err) => {
+      console.log(err);
+      return err;
+    });
+};
+
+/*
+  console.log(data);
+  return axios(config)
+    .then(function (response) {
+      console.log(response);
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+} */
 
 /*
 {
