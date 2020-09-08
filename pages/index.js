@@ -235,10 +235,12 @@ class Home extends Component {
                 </div>
               </div>
               <div className="videoHolder">
-                <Player playsInline>
-                  <source src="images/shieldDrone.mp4" />
-                </Player>
                 <video
+                  width="320"
+                  height="240"
+                  src={`@Url.Content("~images/shieldDrone.mp4")`}
+                ></video>
+                {/*  <video
                   className="background_video"
                   width="100%"
                   height="100vh"
@@ -251,7 +253,7 @@ class Home extends Component {
                 >
                   <source src="images/shieldDrone.mp4" />
                   Your browser does not support HTML5 video.
-                </video>
+                </video> */}
               </div>
             </div>
             <div className="heroRight">
