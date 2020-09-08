@@ -243,7 +243,7 @@ class Home extends Component {
                   loop
                   autoPlay
                   muted
-                  src="/images/shieldDrone.mp4"
+                  src="https://shieldroofrestoration.vercel.app/images/ShieldDrone.mp4"
                   type="video/mp4"
                 >
                   <source src="images/shieldDrone.mp4" />
