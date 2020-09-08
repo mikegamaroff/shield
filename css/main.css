@@ -288,6 +288,7 @@ section {
   overflow-x: hidden;
 }
 .heroHeaderContainer {
+  background: #ffffff;
 }
 .heroHeader {
   display: grid;
