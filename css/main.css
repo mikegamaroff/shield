@@ -8,6 +8,7 @@
 
 html,
 body,
+.container,
 span,
 applet,
 object,
@@ -169,9 +170,11 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
 body {
-  background: #fff;
+  max-width: 1750px;
+  margin: 0 auto !important;
+  float: none !important;
+  background: rgb(161, 161, 161);
 }
 
 body,
@@ -517,6 +520,7 @@ section {
 .materials img {
   width: 8vw;
   border-radius: 100%;
+  max-width: 150px;
 }
 .watermark {
   position: absolute;

@@ -47,7 +47,7 @@ class Home extends Component {
       "Atlanta’s Trusted Professionals For Roof Repair and Replacement";
 
     return (
-      <div>
+      <div className="container">
         <Head>
           <title>{title}</title>
           <meta name="description" content={description} />
@@ -364,13 +364,13 @@ class Home extends Component {
         <div>
           <div className="redDivider" />
         </div>
-        <div className="section3">
+        <div className="section3" style={{ backgroundColor: "#FFFFFF" }}>
           <div style={{ padding: "60px 60px 40px 60px" }}>
             <h1 style={{ marginBottom: "20px" }}>
               What exactly is “Act of God” Insurance Coverage and do you have
               it?
             </h1>
-            <p style={{ maxWidth: "600px" }}>
+            <p>
               This clause in every homeowner’s insurance policy assures you that
               any damage caused by a natural hazard outside of human control
               such as:
