@@ -235,9 +235,9 @@ class Home extends Component {
                 </div>
               </div>
               <div className="videoHolder">
-                {/*   <Player playsInline>
+                <Player playsInline>
                   <source src="images/shieldDrone.mp4" />
-                </Player> */}
+                </Player>
                 <video
                   className="background_video"
                   width="100%"
