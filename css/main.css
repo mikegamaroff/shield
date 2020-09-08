@@ -353,7 +353,7 @@ section {
 .logoHeader {
   height: 170px;
   width: 100%;
-  padding: 0px 20px 0 42px;
+  padding: 20px 20px 0 42px;
   display: flex;
   flex-direction: row;
 }
