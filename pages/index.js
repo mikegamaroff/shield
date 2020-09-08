@@ -68,8 +68,14 @@ class Home extends Component {
           <link rel="icon" type="image/png" href="favicon.ico" />
           <link rel="apple-touch-icon" href="favicon.ico" />
           <link rel="stylesheet" href="" />
-          <meta property="og:image" content="images/logo_shield.svg" />
-          <meta name="twitter:image" content="images/logo_shield.svg" />
+          <meta
+            property="og:image"
+            content="https://shieldroofrestoration.vercel.app/images/logo_shield.svg"
+          />
+          <meta
+            name="twitter:image"
+            content="https://shieldroofrestoration.vercel.app/images/logo_shield.svg"
+          />
           <link rel="canonical" href={siteurl} />
         </Head>
 
