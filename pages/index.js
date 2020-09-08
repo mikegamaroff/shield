@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { Component } from "react";
 import { Input, Button, Textarea } from "../pattern/forms/Fields";
 import { SlideShow } from "../components/SlideShow";
+import { Player } from "video-react";
 
 const teamData = [
   {
@@ -234,6 +235,9 @@ class Home extends Component {
                 </div>
               </div>
               <div className="videoHolder">
+                {/*   <Player playsInline>
+                  <source src="images/shieldDrone.mp4" />
+                </Player> */}
                 <video
                   className="background_video"
                   width="100%"
@@ -245,6 +249,7 @@ class Home extends Component {
                   src="images/shieldDrone.mp4"
                   type="video/mp4"
                 >
+                  <source src="images/shieldDrone.mp4" />
                   Your browser does not support HTML5 video.
                 </video>
               </div>
