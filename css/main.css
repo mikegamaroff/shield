@@ -472,7 +472,8 @@ section {
   background: #eaeaea;
   padding: 40px;
 }
-.actOfGodTable h2 {
+.actOfGodTable h2,
+.high-wind-alone h2 {
   text-transform: uppercase;
   font-size: 13pt;
   font-weight: 600;
@@ -552,4 +553,76 @@ section {
 .thankyouMessage img {
   margin-right: 10px;
   height: 30px;
+}
+.mobile-only {
+  display: none !important;
+}
+.high-wind-alone {
+  display: none;
+}
+@media only screen and (max-width: 750px) {
+  .heroHeader {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .heroLeft {
+    display: none;
+  }
+  .logoHeader {
+    height: auto;
+    width: 100%;
+    padding: 30px 10px 30px 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .logoHeader p {
+    width: 80%;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .videoHolder {
+    border-bottom: solid 30px #c40d0d;
+  }
+  .section2-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .section2-content-left {
+    padding: 30px;
+  }
+  .actOfGodTable {
+    grid-template-columns: 1fr 1fr;
+  }
+  .high-wind {
+    width: 100%;
+    display: none;
+  }
+  .high-wind-alone {
+    background: #eaeaea;
+    display: flex;
+    padding: 0 0px 40px 0px;
+    align-items: center;
+  }
+  .section4 {
+    grid-template-columns: 1fr;
+  }
+  .materials {
+    grid-template-columns: 1fr 1fr;
+  }
+  .materials img {
+    width: 25vw;
+  }
+  .drone {
+    display: none !important;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 35px;
+  }
+  .footerAddress {
+    margin-top: 20px;
+  }
 }

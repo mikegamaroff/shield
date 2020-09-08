@@ -251,6 +251,7 @@ class Home extends Component {
                 </video>
               </div>
             </div>
+
             <div className="heroRight">
               <div className="slideShowContainer">
                 <SlideShow />
@@ -386,10 +387,14 @@ class Home extends Component {
               <img src="images/god_lightning.svg" />
               <h2>Lightning</h2>
             </div>
-            <div className="godIcons">
+            <div className="godIcons high-wind">
               <img src="images/god_wind.svg" />
               <h2>High Wind</h2>
             </div>
+          </div>
+          <div className="godIcons high-wind-alone">
+            <img src="images/god_wind.svg" />
+            <h2>High Wind</h2>
           </div>
           <div style={{ padding: "60px 60px 40px 60px" }}>
             <p>
@@ -685,7 +690,7 @@ class Home extends Component {
               Shield Storm Restoration | © All Rights Reserved
             </div>
           </div>
-          <div style={{ display: "flex" }}>
+          <div className="footerAddress" style={{ display: "flex" }}>
             <div>
               <img
                 style={{ height: "20px", marginRight: "10px" }}
