@@ -64,24 +64,11 @@ class Home extends Component {
           <meta name="twitter:description" content={description} />
           <meta name="twitter:site" content={siteurl} />
           <meta name="twitter:creator" content={sitename} />
-          <link
-            rel="icon"
-            type="image/png"
-            href="https://caqophony.com/favicon.ico"
-          />
-          <link
-            rel="apple-touch-icon"
-            href="https://caqophony.com/favicon.ico"
-          />
+          <link rel="icon" type="image/png" href="favicon.ico" />
+          <link rel="apple-touch-icon" href="favicon.ico" />
           <link rel="stylesheet" href="" />
-          <meta
-            property="og:image"
-            content="https://caqophony.com/images/mainLogo.svg"
-          />
-          <meta
-            name="twitter:image"
-            content="https://caqophony.com/images/mainLogo.svg"
-          />
+          <meta property="og:image" content="images/logo_shield.svg" />
+          <meta name="twitter:image" content="images/logo_shield.svg" />
           <link rel="canonical" href={siteurl} />
         </Head>
 
