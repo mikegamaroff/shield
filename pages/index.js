@@ -62,7 +62,7 @@ class Home extends Component {
       phone: state.phone,
       address: state.address,
     };
-    const req = await fetch("http://localhost:3000/api/mail");
+    const req = await fetch("api/mail");
     console.log(req);
     if (req.ok) {
       this.setState({ sent: "sent" });
