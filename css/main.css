@@ -171,7 +171,8 @@ html {
   box-sizing: inherit;
 }
 body {
-  max-width: 1750px;
+  max-width: 3500px;
+  min-width: 1050px;
   margin: 0 auto !important;
   float: none !important;
   background: rgb(161, 161, 161);

@@ -27,10 +27,6 @@ class Home extends Component {
     super(props);
   }
   state = {
-    topslide: 0,
-    bottomslide: 1,
-    currentlyLoading: null,
-    key: "(EN]KP}pzz]avzqE96XnW?AtuZju9",
     validated: false,
     sent: false,
   };
@@ -60,10 +56,15 @@ class Home extends Component {
     /*     fetch("http://localhost:3000/api/mail").then((r) => {
       console.log(r.json());
     }); */
-    const req = await fetch("/api/mail");
-    const result = await req;
-
-    if (result.ok) {
+    const data = {
+      name: state.name,
+      email: state.email,
+      phone: state.phone,
+      address: state.address,
+    };
+    const req = await fetch("http://localhost:3000/api/mail");
+    console.log(req);
+    if (req.ok) {
       this.setState({ sent: "sent" });
     } else {
       this.setState({ sent: "failed" });

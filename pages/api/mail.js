@@ -1,30 +1,55 @@
 import axios from "axios";
-const api = "https://api.gohighlevel.com/zapier/";
-const token = "c0712103-41f2-43d1-ac0e-c0dcf46600ea";
-var data = {
-  first_name: "Mike",
-  last_name: "Gamaroff",
-  name: "Mike",
-  email: "mike@gamaroff.net",
-  phone: "917.678.2017",
-  address1: "123 My St.",
-  city: "Meridian",
-  country: "US",
-  state: "Idaho",
-  postalCode: "83646",
-  lead: 1,
-  source: "web site",
-  tags: "comma, seperated, list",
-  notes: "Note to add to contact",
-  timezone: "America/Boise *Not available via Zapier",
-  monetary_value: "500 *Not available via Zapier",
-  assignedTo: "Matt",
-};
-const config = {
-  headers: { Authorization: `Bearer ${token}` },
-};
 
-export default (req, res) => {
+const token = "85532424-e8e3-4532-adb9-484a288e5474";
+
+/* export default (req, res) => {
+  return new Promise((resolve) => {
+    axios(config)
+      .then((res) => {
+        console.log(res);
+        resolve(res);
+      })
+      .catch((error) => {
+        return error;
+      });
+  }); */
+
+export default async function (req, res) {
+  var config = {
+    method: "POST",
+    url: "https://rest.gohighlevel.com/v1/contacts/",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: `{
+      "first_name": "Simon",
+      "last_name": "Gamaroff",
+      "name": "Mike",
+      "email": "mike@gamaroff.net",
+      "phone": "917.678.2017",
+      "address1": "123 My St.",
+      "city": "Meridian",
+      "country": "US"
+    }`,
+  };
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  return new Promise((resolve, reject) => {
+    axios(config)
+      .then((response) => {
+        console.log(response);
+        res.end(JSON.stringify(response));
+        resolve(response);
+      })
+      .catch((error) => {
+        res.json(error);
+        res.status(405).end();
+        //resolve(error);
+      });
+  });
+}
+
+/*
+
   return axios
     .post(
       "https://api.gohighlevel.com/zapier/add_update_opportunity",
@@ -39,8 +64,7 @@ export default (req, res) => {
     .catch((err) => {
       console.log(err);
       return err;
-    });
-};
+    }); */
 
 /*
   console.log(data);
