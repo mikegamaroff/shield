@@ -28,7 +28,7 @@ class Home extends Component {
   }
   state = {
     validated: false,
-    sent: false,
+    sent: "",
   };
 
   componentDidMount() {
@@ -56,14 +56,19 @@ class Home extends Component {
     /*     fetch("http://localhost:3000/api/mail").then((r) => {
       console.log(r.json());
     }); */
-    const data = {
+    const data = JSON.stringify({
       name: state.name,
       email: state.email,
       phone: state.phone,
       address: state.address,
+    });
+    console.log(data);
+    const config = {
+      method: "POST",
+      body: data,
     };
-    const req = await fetch("api/mail");
-    console.log(req);
+    const req = await fetch("api/mail", config);
+
     if (req.ok) {
       this.setState({ sent: "sent" });
     } else {
@@ -212,7 +217,7 @@ class Home extends Component {
                             gap="20px"
                           />
                           */}
-                      {!this.state.sent ? (
+                      {this.state.sent !== "sent" ? (
                         <Button
                           label="SUBMIT"
                           submitting={this.state.sending}
@@ -223,16 +228,17 @@ class Home extends Component {
                           gradient={["#ffffff", "#ffffff"]}
                           gap="0px"
                         />
-                      ) : null}
-                      {this.state.sent == "sent" ? (
+                      ) : (
                         <div className="thankyouMessage" id="success">
-                          <img src="/images/copyComplete.gif" />
-                          <div style={{ textAlign: "left" }}>
-                            Thank you for your message. We'll be in touch
-                            shortly.
-                          </div>
+                          <>
+                            <img src="images/copyComplete.gif" />
+                            <div style={{ textAlign: "left" }}>
+                              Thank you for your message. We'll be in touch
+                              shortly.
+                            </div>
+                          </>
                         </div>
-                      ) : null}
+                      )}
 
                       {this.state.sent == "failed" ? (
                         <div className="thankyouMessage" id="error">
@@ -674,7 +680,7 @@ class Home extends Component {
                             gap="20px"
                           />
                           */}
-                  {!this.state.sent ? (
+                  {this.state.sent !== "sent" ? (
                     <Button
                       label="SUBMIT"
                       submitting={this.state.sending}
@@ -685,15 +691,14 @@ class Home extends Component {
                       gradient={["#ffffff", "#ffffff"]}
                       gap="0px"
                     />
-                  ) : null}
-                  {this.state.sent === "sent" ? (
+                  ) : (
                     <div className="thankyouMessage" id="success">
-                      <img src="images/copyComplete.gif" />
+                      <img src="images/copyComplete.gif" alt="sent" />
                       <div>
                         Thank you for your message. We'll be in touch shortly.
                       </div>
                     </div>
-                  ) : null}
+                  )}
 
                   {this.state.sent === "failed" ? (
                     <div className="thankyouMessage" id="error">

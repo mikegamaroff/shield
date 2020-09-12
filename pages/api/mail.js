@@ -1,90 +1,39 @@
-import axios from "axios";
-
-/* export default (req, res) => {
-  return new Promise((resolve) => {
-    axios(config)
-      .then((res) => {
-        console.log(res);
-        resolve(res);
-      })
-      .catch((error) => {
-        return error;
-      });
-  }); */
+var axios = require("axios");
 
 export default async function (req, res) {
-  const token = "85532424-e8e3-4532-adb9-484a288e5474";
+  console.log(req.body);
+  var data = req.body;
+  /*  var data = JSON.stringify({
+    first_name: "Simon",
+    last_name: "Gamaroff",
+    name: "Simon",
+    email: "mike@gamaroff.net",
+    phone: "917.678.2343",
+    address1: "123 My St.",
+    city: "Meridian",
+    country: "US",
+  }); */
+
   var config = {
     method: "POST",
-    url: "https://rest.gohighlevel.com/v1/contacts/",
+    url: "https://rest.gohighlevel.com/v1/contacts",
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: "Bearer 85532424-e8e3-4532-adb9-484a288e5474",
+      "Content-Type": "application/json",
     },
-    body: `{
-      "first_name": "Simon",
-      "last_name": "Gamaroff",
-      "name": "Mike",
-      "email": "mike@gamaroff.net",
-      "phone": "917.678.2017",
-      "address1": "123 My St.",
-      "city": "Meridian",
-      "country": "US"
-    }`,
+    data: data,
   };
   return new Promise((resolve, reject) => {
     axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-        resolve(response.data);
-        return response.data;
+      .then((response) => {
+        res.statusCode = 200;
+        res.end(JSON.stringify(response));
+        resolve();
       })
-      .catch(function (error) {
-        console.log(error);
-        resolve(error);
-        return error;
+      .catch((error) => {
+        res.json(error);
+        res.status(405).end();
+        resolve();
       });
   });
 }
-
-/*
-
-  return axios
-    .post(
-      "https://api.gohighlevel.com/zapier/add_update_opportunity",
-      data,
-      config
-    )
-    .then((res) => {
-      console.log(res.data);
-      return res.data;
-      // This is where you push all the selecter unit data to the redux state so it can be immediately updated
-    })
-    .catch((err) => {
-      console.log(err);
-      return err;
-    }); */
-
-/*
-  console.log(data);
-  return axios(config)
-    .then(function (response) {
-      console.log(response);
-      console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-} */
-
-/*
-{
-    "web":{
-        "client_id":"907024976593-dh568ubgom2evbvdf9puvigjf05t7dqc.apps.googleusercontent.com",
-        "project_id":"quickstart-1592888829168",
-         "auth_uri":"https://accounts.google.com/o/oauth2/auth",
-        "token_uri":"https://oauth2.googleapis.com/token",
-        "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
-         "client_secret":"FB8yLWwZ1Qp8-QBtNiCz6950",
-         "javascript_origins":["http://caqophony.com"]}
-    }
-*/
