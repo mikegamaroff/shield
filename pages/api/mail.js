@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const token = "85532424-e8e3-4532-adb9-484a288e5474";
-
 /* export default (req, res) => {
   return new Promise((resolve) => {
     axios(config)
@@ -15,13 +13,14 @@ const token = "85532424-e8e3-4532-adb9-484a288e5474";
   }); */
 
 export default async function (req, res) {
+  const token = "85532424-e8e3-4532-adb9-484a288e5474";
   var config = {
     method: "POST",
     url: "https://rest.gohighlevel.com/v1/contacts/",
     headers: {
       Authorization: `Bearer ${token}`,
     },
-    body: `{
+    data: `{
       "first_name": "Simon",
       "last_name": "Gamaroff",
       "name": "Mike",
@@ -32,18 +31,17 @@ export default async function (req, res) {
       "country": "US"
     }`,
   };
-  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
   return new Promise((resolve, reject) => {
     axios(config)
-      .then((response) => {
-        console.log(response);
-        res.end(JSON.stringify(response));
-        resolve(response);
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        resolve(response.data);
+        return response.data;
       })
-      .catch((error) => {
-        res.json(error);
-        res.status(405).end();
-        //resolve(error);
+      .catch(function (error) {
+        console.log(error);
+        resolve(error);
+        return error;
       });
   });
 }
