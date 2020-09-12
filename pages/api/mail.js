@@ -20,7 +20,7 @@ export default async function (req, res) {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-    data: `{
+    body: `{
       "first_name": "Simon",
       "last_name": "Gamaroff",
       "name": "Mike",
