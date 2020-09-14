@@ -311,7 +311,6 @@ class Home extends Component {
                 <video
                   className="background_video"
                   width="100%"
-                  height="100vh"
                   preload="auto"
                   loop
                   autoPlay
