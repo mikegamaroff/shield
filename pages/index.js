@@ -310,6 +310,7 @@ class Home extends Component {
               <div className="videoHolder">
                 <video
                   className="background_video"
+                  playsInline
                   width="100%"
                   preload="auto"
                   loop
