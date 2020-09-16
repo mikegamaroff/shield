@@ -300,10 +300,7 @@ class Home extends Component {
                     <div className="logoWord">
                       <img id="word" src="images/logo_word.svg" />
                     </div>
-                    <p>
-                      Atlanta’s Trusted Professionals For Roof Repair and
-                      Replacement
-                    </p>
+                    <p>Atlanta’s Trusted Professionals For Roof Replacement</p>
                   </div>
                 </div>
               </div>
@@ -414,8 +411,8 @@ class Home extends Component {
               <p>
                 We specialize in guiding you through this process, from the
                 initial hail damage roof inspection and assessment to claim
-                filing and the adjuster inspection process to the roof repair
-                and replacement.{" "}
+                filing and the adjuster inspection process to the roof
+                replacement.
               </p>
 
               <p>
@@ -479,8 +476,9 @@ class Home extends Component {
               Here at SHIELD Storm Restoration, we will happily inspect your
               roof using a specific “Act of God” insurance damage assessment. If
               your roof qualifies, then we will work directly with your
-              insurance company to ensure that they will pay 100% of your hail
-              damage roof insurance claim which makes depreciation recoverable.
+              insurance company to ensure that they will pay 100% of your storm
+              damage roof insurance claim, minus your deductible, which makes
+              depreciation recoverable.
             </p>
 
             <p>
