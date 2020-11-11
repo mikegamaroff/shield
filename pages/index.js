@@ -537,7 +537,7 @@ class Home extends Component {
                   <img src="images/roof_slate.jpg" />
                 </div>
                 <div>
-                  <h2>Slate</h2>
+                  <h2>Designer</h2>
                 </div>
               </div>
               <div className="materialHolder">
@@ -553,31 +553,15 @@ class Home extends Component {
                   <img src="images/roof_asphalt.jpg" />
                 </div>
                 <div>
-                  <h2>Asphalt</h2>
+                  <h2>Three Tab</h2>
                 </div>
               </div>
               <div className="materialHolder">
                 <div>
-                  <img src="images/roof_clay.jpg" />
+                  <img src="images/roof_architectural.jpg" />
                 </div>
                 <div>
-                  <h2>Clay</h2>
-                </div>
-              </div>
-              <div className="materialHolder">
-                <div>
-                  <img src="images/roof_copper.jpg" />
-                </div>
-                <div>
-                  <h2>Copper</h2>
-                </div>
-              </div>
-              <div className="materialHolder">
-                <div>
-                  <img src="images/roof_cedar.jpg" />
-                </div>
-                <div>
-                  <h2>Cedarwood</h2>
+                  <h2>Architectural</h2>
                 </div>
               </div>
             </div>
