@@ -16,7 +16,7 @@ export default async function (req, res) {
 
   var config = {
     method: "POST",
-    url: "https://hooks.zapier.com/hooks/catch/7263522/ow2gu9l",
+    url: process.env.ZAPIER_URL,
     headers: {
       Authorization: "Bearer 85532424-e8e3-4532-adb9-484a288e5474",
       "Content-Type": "application/json",

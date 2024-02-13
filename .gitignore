@@ -38,3 +38,4 @@ yarn-error.log*
 # vercel
 .vercel
 >>>>>>> b7b4761c5cee07bf53b3840b6331d1718e8f8b46
+.env
