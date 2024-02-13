@@ -18,7 +18,7 @@ export default async function (req, res) {
     method: "POST",
     url: process.env.ZAPIER_URL,
     headers: {
-      Authorization: "Bearer 85532424-e8e3-4532-adb9-484a288e5474",
+      Authorization: process.env.ZAPIER_TOKEN,
       "Content-Type": "application/json",
     },
     data: data,
