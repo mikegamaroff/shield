@@ -3,16 +3,6 @@ var axios = require("axios");
 export default async function (req, res) {
   console.log(req.body);
   var data = req.body;
-  /*  var data = JSON.stringify({
-    first_name: "Simon",
-    last_name: "Gamaroff",
-    name: "Simon",
-    email: "mike@gamaroff.net",
-    phone: "917.678.2343",
-    address1: "123 My St.",
-    city: "Meridian",
-    country: "US",
-  }); */
 
   var config = {
     method: "POST",
